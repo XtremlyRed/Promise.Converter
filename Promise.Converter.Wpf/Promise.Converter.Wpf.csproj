@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+
+		<TargetFrameworks>net462;netcoreapp3.1;net6.0-windows;net8.0-windows</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+ 
+	<ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+		<PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.0" />
+		<PackageReference Include="System.ValueTuple" Version="4.5.0" />
+	</ItemGroup>
+
+ 
+	<Import Project="..\Promise.Converter\Promise.Converter.projitems" Label="Shared" />
+
+
+
+
+	<Import Project="$(SolutionDir)\GlobalCompileSettings.Targets" />
+
+
+
+</Project>
